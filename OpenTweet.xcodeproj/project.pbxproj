@@ -12,9 +12,19 @@
 		009C4C711D9F0CD600F0BC6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */; };
 		009C4C731D9F0CD600F0BC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C721D9F0CD600F0BC6C /* Assets.xcassets */; };
 		009C4C761D9F0CD600F0BC6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */; };
-		009C4C811D9F0CD600F0BC6C /* OpenTweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C4C801D9F0CD600F0BC6C /* OpenTweetTests.swift */; };
 		009C4C8C1D9F0CD600F0BC6C /* OpenTweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C4C8B1D9F0CD600F0BC6C /* OpenTweetUITests.swift */; };
 		009C4C9B1D9F0D4100F0BC6C /* timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C9A1D9F0D4100F0BC6C /* timeline.json */; };
+		225FBB6E29324B1D00A3F9BB /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB6929324B1D00A3F9BB /* NetworkError.swift */; };
+		225FBB6F29324B1D00A3F9BB /* LocalNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB6A29324B1D00A3F9BB /* LocalNetworkManager.swift */; };
+		225FBB7029324B1D00A3F9BB /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB6B29324B1D00A3F9BB /* DataParser.swift */; };
+		225FBB7129324B1D00A3F9BB /* LocalEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB6C29324B1D00A3F9BB /* LocalEndPoint.swift */; };
+		225FBB7229324B1D00A3F9BB /* NetworkEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB6D29324B1D00A3F9BB /* NetworkEndpointProtocol.swift */; };
+		225FBB7629324B2900A3F9BB /* TimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB7429324B2900A3F9BB /* TimeLine.swift */; };
+		225FBB7729324B2900A3F9BB /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB7529324B2900A3F9BB /* Tweet.swift */; };
+		225FBB7C293253C400A3F9BB /* LocalNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB7B293253C400A3F9BB /* LocalNetworkManagerTests.swift */; };
+		225FBB8429325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */; };
+		225FBB862932658B00A3F9BB /* ValidTestTimeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 225FBB852932658B00A3F9BB /* ValidTestTimeline.json */; };
+		225FBB8C29326F5D00A3F9BB /* BrokenTestTimeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 225FBB8B29326F5D00A3F9BB /* BrokenTestTimeline.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +53,23 @@
 		009C4C751D9F0CD600F0BC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009C4C771D9F0CD600F0BC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009C4C7C1D9F0CD600F0BC6C /* OpenTweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		009C4C801D9F0CD600F0BC6C /* OpenTweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTweetTests.swift; sourceTree = "<group>"; };
 		009C4C821D9F0CD600F0BC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009C4C871D9F0CD600F0BC6C /* OpenTweetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTweetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		009C4C8B1D9F0CD600F0BC6C /* OpenTweetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTweetUITests.swift; sourceTree = "<group>"; };
 		009C4C8D1D9F0CD600F0BC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009C4C9A1D9F0D4100F0BC6C /* timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timeline.json; sourceTree = "<group>"; };
 		009C4C9D1D9F104800F0BC6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		225FBB6929324B1D00A3F9BB /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		225FBB6A29324B1D00A3F9BB /* LocalNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNetworkManager.swift; sourceTree = "<group>"; };
+		225FBB6B29324B1D00A3F9BB /* DataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		225FBB6C29324B1D00A3F9BB /* LocalEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalEndPoint.swift; sourceTree = "<group>"; };
+		225FBB6D29324B1D00A3F9BB /* NetworkEndpointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkEndpointProtocol.swift; sourceTree = "<group>"; };
+		225FBB7429324B2900A3F9BB /* TimeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
+		225FBB7529324B2900A3F9BB /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
+		225FBB7B293253C400A3F9BB /* LocalNetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkManagerTests.swift; sourceTree = "<group>"; };
+		225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTestEndPointTestEndPoint.swift; sourceTree = "<group>"; };
+		225FBB852932658B00A3F9BB /* ValidTestTimeline.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ValidTestTimeline.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		225FBB8B29326F5D00A3F9BB /* BrokenTestTimeline.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BrokenTestTimeline.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				009C4C6B1D9F0CD600F0BC6C /* AppDelegate.swift */,
+				225FBB7329324B2900A3F9BB /* Models */,
+				225FBB6829324B1D00A3F9BB /* Network Layer */,
 				009C4C6D1D9F0CD600F0BC6C /* TimelineViewController.swift */,
 				009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */,
 				009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */,
@@ -115,8 +137,10 @@
 		009C4C7F1D9F0CD600F0BC6C /* OpenTweetTests */ = {
 			isa = PBXGroup;
 			children = (
-				009C4C801D9F0CD600F0BC6C /* OpenTweetTests.swift */,
+				225FBB8D293280F300A3F9BB /* Data */,
 				009C4C821D9F0CD600F0BC6C /* Info.plist */,
+				225FBB7B293253C400A3F9BB /* LocalNetworkManagerTests.swift */,
+				225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */,
 			);
 			path = OpenTweetTests;
 			sourceTree = "<group>";
@@ -134,6 +158,36 @@
 			isa = PBXGroup;
 			children = (
 				009C4C9A1D9F0D4100F0BC6C /* timeline.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		225FBB6829324B1D00A3F9BB /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				225FBB6929324B1D00A3F9BB /* NetworkError.swift */,
+				225FBB6A29324B1D00A3F9BB /* LocalNetworkManager.swift */,
+				225FBB6B29324B1D00A3F9BB /* DataParser.swift */,
+				225FBB6C29324B1D00A3F9BB /* LocalEndPoint.swift */,
+				225FBB6D29324B1D00A3F9BB /* NetworkEndpointProtocol.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		225FBB7329324B2900A3F9BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				225FBB7429324B2900A3F9BB /* TimeLine.swift */,
+				225FBB7529324B2900A3F9BB /* Tweet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		225FBB8D293280F300A3F9BB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				225FBB852932658B00A3F9BB /* ValidTestTimeline.json */,
+				225FBB8B29326F5D00A3F9BB /* BrokenTestTimeline.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -212,6 +266,7 @@
 					009C4C7B1D9F0CD600F0BC6C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = QPU8QS3E62;
+						LastSwiftMigration = 1300;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 009C4C671D9F0CD600F0BC6C;
 					};
@@ -259,6 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225FBB862932658B00A3F9BB /* ValidTestTimeline.json in Resources */,
+				225FBB8C29326F5D00A3F9BB /* BrokenTestTimeline.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +333,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225FBB7629324B2900A3F9BB /* TimeLine.swift in Sources */,
+				225FBB6F29324B1D00A3F9BB /* LocalNetworkManager.swift in Sources */,
+				225FBB7029324B1D00A3F9BB /* DataParser.swift in Sources */,
+				225FBB7729324B2900A3F9BB /* Tweet.swift in Sources */,
 				009C4C6E1D9F0CD600F0BC6C /* TimelineViewController.swift in Sources */,
 				009C4C6C1D9F0CD600F0BC6C /* AppDelegate.swift in Sources */,
+				225FBB7129324B1D00A3F9BB /* LocalEndPoint.swift in Sources */,
+				225FBB7229324B1D00A3F9BB /* NetworkEndpointProtocol.swift in Sources */,
+				225FBB6E29324B1D00A3F9BB /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +349,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				009C4C811D9F0CD600F0BC6C /* OpenTweetTests.swift in Sources */,
+				225FBB8429325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift in Sources */,
+				225FBB7C293253C400A3F9BB /* LocalNetworkManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,12 +545,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QPU8QS3E62;
 				INFOPLIST_FILE = OpenTweetTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opentable.OpenTweetTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenTweet.app/OpenTweet";
 			};
@@ -496,6 +563,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = QPU8QS3E62;
 				INFOPLIST_FILE = OpenTweetTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
