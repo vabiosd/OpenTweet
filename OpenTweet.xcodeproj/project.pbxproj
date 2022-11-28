@@ -21,7 +21,7 @@
 		225FBB7629324B2900A3F9BB /* TimeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB7429324B2900A3F9BB /* TimeLine.swift */; };
 		225FBB7729324B2900A3F9BB /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB7529324B2900A3F9BB /* Tweet.swift */; };
 		225FBB7C293253C400A3F9BB /* LocalNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB7B293253C400A3F9BB /* LocalNetworkManagerTests.swift */; };
-		225FBB8429325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */; };
+		225FBB8429325E0400A3F9BB /* LocalTestEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB8329325E0400A3F9BB /* LocalTestEndPoint.swift */; };
 		225FBB862932658B00A3F9BB /* ValidTestTimeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 225FBB852932658B00A3F9BB /* ValidTestTimeline.json */; };
 		225FBB8C29326F5D00A3F9BB /* BrokenTestTimeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 225FBB8B29326F5D00A3F9BB /* BrokenTestTimeline.json */; };
 		225FBB90293282E300A3F9BB /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB8F293282E300A3F9BB /* TimelineViewModel.swift */; };
@@ -31,6 +31,7 @@
 		225FBB9E2933C0C200A3F9BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB9D2933C0C200A3F9BB /* SceneDelegate.swift */; };
 		225FBBA82933FA7600A3F9BB /* TimelineViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBBA72933FA7600A3F9BB /* TimelineViewModelTests.swift */; };
 		22C451C12934AD5B00E9A617 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C451C02934AD5B00E9A617 /* Date+Extension.swift */; };
+		22C451C42934DEFD00E9A617 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C451C32934DEFD00E9A617 /* DateExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +73,7 @@
 		225FBB7429324B2900A3F9BB /* TimeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLine.swift; sourceTree = "<group>"; };
 		225FBB7529324B2900A3F9BB /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		225FBB7B293253C400A3F9BB /* LocalNetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetworkManagerTests.swift; sourceTree = "<group>"; };
-		225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTestEndPointTestEndPoint.swift; sourceTree = "<group>"; };
+		225FBB8329325E0400A3F9BB /* LocalTestEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTestEndPoint.swift; sourceTree = "<group>"; };
 		225FBB852932658B00A3F9BB /* ValidTestTimeline.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ValidTestTimeline.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		225FBB8B29326F5D00A3F9BB /* BrokenTestTimeline.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BrokenTestTimeline.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		225FBB8F293282E300A3F9BB /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		225FBB9D2933C0C200A3F9BB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		225FBBA72933FA7600A3F9BB /* TimelineViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModelTests.swift; sourceTree = "<group>"; };
 		22C451C02934AD5B00E9A617 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		22C451C32934DEFD00E9A617 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		009C4C7F1D9F0CD600F0BC6C /* OpenTweetTests */ = {
 			isa = PBXGroup;
 			children = (
+				22C451C22934DEE400E9A617 /* Date Extension Tests */,
 				225FBBA42933FA2A00A3F9BB /* TimelineViewModelTests */,
 				225FBBA32933FA0700A3F9BB /* NetworkLayerTests */,
 				225FBB8D293280F300A3F9BB /* Data */,
@@ -245,7 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				225FBB7B293253C400A3F9BB /* LocalNetworkManagerTests.swift */,
-				225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */,
+				225FBB8329325E0400A3F9BB /* LocalTestEndPoint.swift */,
 			);
 			path = NetworkLayerTests;
 			sourceTree = "<group>";
@@ -264,6 +267,14 @@
 				22C451C02934AD5B00E9A617 /* Date+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		22C451C22934DEE400E9A617 /* Date Extension Tests */ = {
+			isa = PBXGroup;
+			children = (
+				22C451C32934DEFD00E9A617 /* DateExtensionTests.swift */,
+			);
+			path = "Date Extension Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,7 +440,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				225FBBA82933FA7600A3F9BB /* TimelineViewModelTests.swift in Sources */,
-				225FBB8429325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift in Sources */,
+				22C451C42934DEFD00E9A617 /* DateExtensionTests.swift in Sources */,
+				225FBB8429325E0400A3F9BB /* LocalTestEndPoint.swift in Sources */,
 				225FBB7C293253C400A3F9BB /* LocalNetworkManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

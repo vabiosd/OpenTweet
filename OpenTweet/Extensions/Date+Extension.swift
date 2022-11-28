@@ -28,9 +28,9 @@ extension Date {
     }
     
     /// Returns the a custom time interval description from another date or formats the date if its more than a week old
-    func offset(from date: Date = Date(), dateFormatter: DateFormatter) -> String {
+    func getFormattedDateString(from date: Date = Date(), dateFormatter: DateFormatter) -> String {
         if abs(days(from: date)) > 6 {
-            return dateFormatter.string(from: date)
+            return dateFormatter.string(from: self)
         } else if abs(days(from: date)) > 0 {
             return "\(abs(days(from: date)))d"
         } else if abs(hours(from: date)) > 0 {

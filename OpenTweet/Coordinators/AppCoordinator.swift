@@ -28,7 +28,8 @@ class AppCoordinator: Coordinator {
     func start() {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.dateDecodingStrategy = .iso8601
-        let timeLineViewModel = TimeLineViewModel(localAPIManager: LocalNetworkManager(jsonDecoder: jsonDecoder))
+        let timeLineViewModel = TimeLineViewModel(localAPIManager: LocalNetworkManager(jsonDecoder: jsonDecoder),
+                                                  localEndpoint: LocalEndPoint())
         navigationController.pushViewController(TimelineViewController(timeLineViewModel: timeLineViewModel), animated: true)
     }
     

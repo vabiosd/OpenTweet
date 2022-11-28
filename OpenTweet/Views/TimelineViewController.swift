@@ -135,10 +135,8 @@ class TimelineViewController: UIViewController {
             DispatchQueue.main.async {
                 /// Updating the UI based on the state
                 switch state {
-                case .loading:
+//                case .loading:
                     /// In case of a real app fetching data over network, we can add a loading UI here
-                    self.tableView.isHidden = true
-                    self.errorView.isHidden = true
                 case .errorLoadingTweets(let errorString):
                     /// Hiding tableView and showing errorView, in case of an error fetching tweets
                     self.tableView.isHidden = true

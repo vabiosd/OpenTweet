@@ -12,7 +12,7 @@ import UIKit
 /// An enum depicting various states of the timeline
 enum TimeLineState {
     /// In case of a real app with networking there would be a loading state
-    case loading
+//    case loading
     case loadedTweets([TweetCellViewData])
     case errorLoadingTweets(String)
 }
@@ -20,9 +20,10 @@ enum TimeLineState {
 /// Timeline viewModel responsible for fetching tweets and converting them into TweetCellViewData
 final class TimeLineViewModel {
     private let localAPIManager: NetworkManagerProtocol
+    private let localEndpoint: NetworkEndpointProtocol
     
     /// Local viewModel timelineState which updates the TimelineViewController using the updateTimelineState closure
-    private var timelineState: TimeLineState = .loading {
+    private var timelineState: TimeLineState = .loadedTweets([]) {
         didSet {
             updateTimelineState?(timelineState)
         }
@@ -41,16 +42,16 @@ final class TimeLineViewModel {
     ///  Closure used to update TimelineViewController when TimeLineState changes
     var updateTimelineState: ((TimeLineState) -> ())?
     
-    init(localAPIManager: NetworkManagerProtocol) {
+    init(localAPIManager: NetworkManagerProtocol, localEndpoint: NetworkEndpointProtocol) {
         self.localAPIManager = localAPIManager
+        self.localEndpoint = localEndpoint
     }
     
     /// Fetching tweets using the localAPIManager
     func fetchTweets() {
         /// empty the local collection when a new fetch starts
         tweetCellViewDataCollection = []
-        timelineState = .loading
-        localAPIManager.getData(networkEndpoint: LocalEndPoint()) { [weak self] (result: Result<TimeLine, NetworkError>) in
+        localAPIManager.getData(networkEndpoint: localEndpoint) { [weak self] (result: Result<TimeLine, NetworkError>) in
             guard let self = self else {
                 return
             }
@@ -80,7 +81,7 @@ final class TimeLineViewModel {
                                                        avatar: tweet.avatar,
                                                        /// Show threads for only tweets with replies
                                                        showThread: tweetsWithReplies.contains(tweet.id),
-                                                       date: tweet.date.offset(dateFormatter: dateFormatter),
+                                                       date: tweet.date.getFormattedDateString(dateFormatter: dateFormatter),
                                                        content: tweet.content))
         }
         return tweetCellViewData
