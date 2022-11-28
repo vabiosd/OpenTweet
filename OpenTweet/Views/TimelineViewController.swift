@@ -15,6 +15,10 @@ class TimelineViewController: UIViewController {
     private let timeLineViewModel: TimeLineViewModel
     private let cellId = "tweetCell"
     
+    /// Keeping reference to tableView's horizontal constraints to update the layout for wider devices
+    private var tableViewLeadingAnchor: NSLayoutConstraint?
+    private var tableViewTrailingAnchor: NSLayoutConstraint?
+    
     private var errorView: UILabel = {
         let errorView = UILabel()
         errorView.numberOfLines = 0
@@ -53,6 +57,13 @@ class TimelineViewController: UIViewController {
         setupConstraints()
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        /// Update constraints based on the horizontalSizeClass trait
+        self.setupTableViewHorizontalConstraints()
+    }
+    
     //MARK: Setting up views
     
     private func setupComponents() {
@@ -67,17 +78,18 @@ class TimelineViewController: UIViewController {
         tableView.separatorColor = .gray
     
         /// Adding subviews
-        view.addSubview(tableView)
-        view.addSubview(errorView)
+        [tableView, errorView].forEach{
+            view.addSubview($0)
+        }
     }
     
     private func setupConstraints() {
         
+        setupTableViewHorizontalConstraints()
+        
         NSLayoutConstraint.activate([
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            tableView.topAnchor.constraint(equalTo: view.topAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -85,6 +97,31 @@ class TimelineViewController: UIViewController {
             errorView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -12),
             errorView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
+    }
+    
+    private func setupTableViewHorizontalConstraints() {
+        /// Leveraging size class to adjust tableview's horizontal constraints
+        switch traitCollection.horizontalSizeClass {
+        case .compact:
+            tableViewLeadingAnchor?.isActive = false
+            tableViewLeadingAnchor = tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+            tableViewLeadingAnchor?.isActive = true
+            
+            tableViewTrailingAnchor?.isActive = false
+            tableViewTrailingAnchor = tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            tableViewTrailingAnchor?.isActive = true
+        case .regular:
+            let horizontalInsets = view.frame.width / 6.0
+            tableViewLeadingAnchor?.isActive = false
+            tableViewLeadingAnchor = tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: horizontalInsets)
+            tableViewLeadingAnchor?.isActive = true
+            
+            tableViewTrailingAnchor?.isActive = false
+            tableViewTrailingAnchor = tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -horizontalInsets)
+            tableViewTrailingAnchor?.isActive = true
+        default:
+            break
+        }
     }
     
    //MARK: Setting up viewModel bindings
