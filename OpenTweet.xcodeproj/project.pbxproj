@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		009C4C6C1D9F0CD600F0BC6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C4C6B1D9F0CD600F0BC6C /* AppDelegate.swift */; };
 		009C4C6E1D9F0CD600F0BC6C /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C4C6D1D9F0CD600F0BC6C /* TimelineViewController.swift */; };
-		009C4C711D9F0CD600F0BC6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */; };
 		009C4C731D9F0CD600F0BC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C721D9F0CD600F0BC6C /* Assets.xcassets */; };
 		009C4C761D9F0CD600F0BC6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */; };
 		009C4C8C1D9F0CD600F0BC6C /* OpenTweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009C4C8B1D9F0CD600F0BC6C /* OpenTweetUITests.swift */; };
@@ -25,6 +24,13 @@
 		225FBB8429325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */; };
 		225FBB862932658B00A3F9BB /* ValidTestTimeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 225FBB852932658B00A3F9BB /* ValidTestTimeline.json */; };
 		225FBB8C29326F5D00A3F9BB /* BrokenTestTimeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 225FBB8B29326F5D00A3F9BB /* BrokenTestTimeline.json */; };
+		225FBB90293282E300A3F9BB /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB8F293282E300A3F9BB /* TimelineViewModel.swift */; };
+		225FBB932932890600A3F9BB /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB922932890600A3F9BB /* TweetTableViewCell.swift */; };
+		225FBB95293297EA00A3F9BB /* TweetCellViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB94293297EA00A3F9BB /* TweetCellViewData.swift */; };
+		225FBB982933BA6E00A3F9BB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB972933BA6E00A3F9BB /* AppCoordinator.swift */; };
+		225FBB9E2933C0C200A3F9BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBB9D2933C0C200A3F9BB /* SceneDelegate.swift */; };
+		225FBBA82933FA7600A3F9BB /* TimelineViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225FBBA72933FA7600A3F9BB /* TimelineViewModelTests.swift */; };
+		22C451C12934AD5B00E9A617 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C451C02934AD5B00E9A617 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +54,6 @@
 		009C4C681D9F0CD600F0BC6C /* OpenTweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenTweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009C4C6B1D9F0CD600F0BC6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		009C4C6D1D9F0CD600F0BC6C /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
-		009C4C701D9F0CD600F0BC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		009C4C721D9F0CD600F0BC6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		009C4C751D9F0CD600F0BC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009C4C771D9F0CD600F0BC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +75,13 @@
 		225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTestEndPointTestEndPoint.swift; sourceTree = "<group>"; };
 		225FBB852932658B00A3F9BB /* ValidTestTimeline.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ValidTestTimeline.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		225FBB8B29326F5D00A3F9BB /* BrokenTestTimeline.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BrokenTestTimeline.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		225FBB8F293282E300A3F9BB /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		225FBB922932890600A3F9BB /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
+		225FBB94293297EA00A3F9BB /* TweetCellViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellViewData.swift; sourceTree = "<group>"; };
+		225FBB972933BA6E00A3F9BB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		225FBB9D2933C0C200A3F9BB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		225FBBA72933FA7600A3F9BB /* TimelineViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModelTests.swift; sourceTree = "<group>"; };
+		22C451C02934AD5B00E9A617 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +134,13 @@
 		009C4C6A1D9F0CD600F0BC6C /* OpenTweet */ = {
 			isa = PBXGroup;
 			children = (
-				009C4C6B1D9F0CD600F0BC6C /* AppDelegate.swift */,
+				225FBB9C2933BD6200A3F9BB /* App Delegate */,
+				225FBB962933B5CA00A3F9BB /* Coordinators */,
+				22C451BF2934AD4800E9A617 /* Extensions */,
+				225FBB91293288DF00A3F9BB /* Views */,
+				225FBB8E293282CF00A3F9BB /* ViewModels */,
 				225FBB7329324B2900A3F9BB /* Models */,
 				225FBB6829324B1D00A3F9BB /* Network Layer */,
-				009C4C6D1D9F0CD600F0BC6C /* TimelineViewController.swift */,
-				009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */,
 				009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */,
 				009C4C721D9F0CD600F0BC6C /* Assets.xcassets */,
 				009C4C771D9F0CD600F0BC6C /* Info.plist */,
@@ -137,10 +151,10 @@
 		009C4C7F1D9F0CD600F0BC6C /* OpenTweetTests */ = {
 			isa = PBXGroup;
 			children = (
+				225FBBA42933FA2A00A3F9BB /* TimelineViewModelTests */,
+				225FBBA32933FA0700A3F9BB /* NetworkLayerTests */,
 				225FBB8D293280F300A3F9BB /* Data */,
 				009C4C821D9F0CD600F0BC6C /* Info.plist */,
-				225FBB7B293253C400A3F9BB /* LocalNetworkManagerTests.swift */,
-				225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */,
 			);
 			path = OpenTweetTests;
 			sourceTree = "<group>";
@@ -190,6 +204,66 @@
 				225FBB8B29326F5D00A3F9BB /* BrokenTestTimeline.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		225FBB8E293282CF00A3F9BB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				225FBB8F293282E300A3F9BB /* TimelineViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		225FBB91293288DF00A3F9BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				009C4C6D1D9F0CD600F0BC6C /* TimelineViewController.swift */,
+				225FBB922932890600A3F9BB /* TweetTableViewCell.swift */,
+				225FBB94293297EA00A3F9BB /* TweetCellViewData.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		225FBB962933B5CA00A3F9BB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				225FBB972933BA6E00A3F9BB /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		225FBB9C2933BD6200A3F9BB /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				225FBB9D2933C0C200A3F9BB /* SceneDelegate.swift */,
+				009C4C6B1D9F0CD600F0BC6C /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		225FBBA32933FA0700A3F9BB /* NetworkLayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				225FBB7B293253C400A3F9BB /* LocalNetworkManagerTests.swift */,
+				225FBB8329325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift */,
+			);
+			path = NetworkLayerTests;
+			sourceTree = "<group>";
+		};
+		225FBBA42933FA2A00A3F9BB /* TimelineViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				225FBBA72933FA7600A3F9BB /* TimelineViewModelTests.swift */,
+			);
+			path = TimelineViewModelTests;
+			sourceTree = "<group>";
+		};
+		22C451BF2934AD4800E9A617 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				22C451C02934AD5B00E9A617 /* Date+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +380,6 @@
 				009C4C9B1D9F0D4100F0BC6C /* timeline.json in Resources */,
 				009C4C761D9F0CD600F0BC6C /* LaunchScreen.storyboard in Resources */,
 				009C4C731D9F0CD600F0BC6C /* Assets.xcassets in Resources */,
-				009C4C711D9F0CD600F0BC6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,14 +407,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				225FBB7629324B2900A3F9BB /* TimeLine.swift in Sources */,
+				225FBB9E2933C0C200A3F9BB /* SceneDelegate.swift in Sources */,
 				225FBB6F29324B1D00A3F9BB /* LocalNetworkManager.swift in Sources */,
+				225FBB982933BA6E00A3F9BB /* AppCoordinator.swift in Sources */,
 				225FBB7029324B1D00A3F9BB /* DataParser.swift in Sources */,
+				22C451C12934AD5B00E9A617 /* Date+Extension.swift in Sources */,
 				225FBB7729324B2900A3F9BB /* Tweet.swift in Sources */,
 				009C4C6E1D9F0CD600F0BC6C /* TimelineViewController.swift in Sources */,
+				225FBB95293297EA00A3F9BB /* TweetCellViewData.swift in Sources */,
 				009C4C6C1D9F0CD600F0BC6C /* AppDelegate.swift in Sources */,
+				225FBB932932890600A3F9BB /* TweetTableViewCell.swift in Sources */,
 				225FBB7129324B1D00A3F9BB /* LocalEndPoint.swift in Sources */,
 				225FBB7229324B1D00A3F9BB /* NetworkEndpointProtocol.swift in Sources */,
 				225FBB6E29324B1D00A3F9BB /* NetworkError.swift in Sources */,
+				225FBB90293282E300A3F9BB /* TimelineViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225FBBA82933FA7600A3F9BB /* TimelineViewModelTests.swift in Sources */,
 				225FBB8429325E0400A3F9BB /* LocalTestEndPointTestEndPoint.swift in Sources */,
 				225FBB7C293253C400A3F9BB /* LocalNetworkManagerTests.swift in Sources */,
 			);
@@ -378,14 +458,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				009C4C701D9F0CD600F0BC6C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -518,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QPU8QS3E62;
 				INFOPLIST_FILE = OpenTweet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opentable.OpenTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,7 +604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QPU8QS3E62;
 				INFOPLIST_FILE = OpenTweet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.opentable.OpenTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";

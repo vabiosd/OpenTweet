@@ -8,10 +8,10 @@
 
 import Foundation
 
+typealias TweetID = String
+
 /// Individual Tweet object of the Timeline
 struct Tweet: Identifiable, Decodable {
-    
-    typealias TweetID = String
     
     /// Tweet Identifier
     let id: TweetID
